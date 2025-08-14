@@ -1,9 +1,9 @@
 import streamlit as st
-from data_loader import load_data
-from preprocessing import preprocess_data
-from model import train_model
-from dashboard import show_dashboard
-from predict import show_predict
+from scripts.data_loader import load_data
+from scripts.preprocessing import preprocess_data
+from scripts.model import train_model
+from scripts.dashboard import show_dashboard
+from scripts.predict import show_predict
 
 # Custom CSS
 st.markdown('''<style>
@@ -61,3 +61,4 @@ with selected_tab[0]:
 
 with selected_tab[1]:
     show_predict(X, label_encoders, scaler, model, y, df)
+
